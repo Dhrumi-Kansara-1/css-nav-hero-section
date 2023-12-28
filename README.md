@@ -1,1 +1,1 @@
-###Example of Hero background image with animation
+- Example of Hero background image with animation

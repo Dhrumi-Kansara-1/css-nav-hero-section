@@ -26,9 +26,7 @@ body {
   margin: 0 auto;
 }
 .hero {
-  background: linear-gradient(to right,rgba(105, 62, 27, 0.5), rgba(105, 62, 27, 0.8)),
-    url("./images/hero-bcg.jpg") fixed center/cover;
-  min-height: calc(100vh - 5rem);
+  background: rgb(92, 51, 18);
 }
 .hero-center {
   width: 90vw;
@@ -36,6 +34,10 @@ body {
   margin: 0 auto;
   padding: 5rem 0;
   color: #fff;
+  min-height: calc(100vh - 5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .hero-title {
   letter-spacing: 2px;
@@ -54,7 +56,47 @@ body {
   color: #fff;
   letter-spacing: 2px;
   cursor: pointer;
+  width: fit-content;
+  animation: sildeFromBottom 3s ease-in-out 1;
 }
 .hero-btn:hover {
   background: rgba(0, 0, 0, 0.2);
+}
+/*animation*/
+.hero-text {
+  animation: sildFromTop 3s ease-in-out 1;
+}
+
+/* ANIMATION */
+@keyframes sildFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes sildeFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*MEDIA SCREEN*/
+@media screen and (min-width: 768px) {
+  .hero {
+    background: linear-gradient(
+        to right,
+        rgba(105, 62, 27, 0.5),
+        rgba(105, 62, 27, 0.8)
+      ),
+      url("./images/hero-bcg.jpg") fixed center/cover;
+  }
 }
